@@ -1,0 +1,334 @@
+<!--
+<title>Conferenceroombook</title>
+
+<div class="row">
+
+<h1>conference rooms booking</h1>
+
+</div>
+
+<div class="rowone">
+
+<h2>Room Search</h2>
+
+</div>
+
+<div class="rowtwo">
+
+<div ng-controller="ButtonsCtrl">
+
+    <h4>Location :*  </h4>
+	<div class="col-sm-2">
+
+        <input type="checkbox"  ng-model="checkModel.a" ><label>All </label> </div>
+					<div class="col-sm-2">
+        <input type="checkbox"  ng-model="checkModel.b" ><label>Cybage Towers</label></div>
+					<div class="col-sm-2">
+        <input type="checkbox"  ng-model="checkModel.c" ><label>Gandhinagar </label></div>
+					<div class="col-sm-2">
+        <input type="checkbox"  ng-model="checkModel.d" ><label>Hydarabad </label></div>
+					<div class="col-sm-4">
+        <input type="checkbox"  ng-model="checkModel.e" ><label>West Avenue </label></div>
+
+    </div>
+
+
+
+
+-->
+
+
+<div class="row">
+<h1>conference rooms booking</h1>
+
+</div>
+
+<hr align="left" max-width="100%">
+
+
+
+
+
+<div class="rowone">
+
+<h5>Room Search</h5>
+
+</div>
+
+<hr align="left" max-width="100%">
+
+
+
+<label>Location:*</label>
+
+<div class="rowsecond" >
+
+
+
+
+  <div class="col-sm-2">
+<label>All
+            <input type="checkbox" ng-model="selectedAll" ng-click="checkAll()" />
+        </label>
+</div>
+
+    <div ng-repeat="location in locationchecklist" >
+
+
+<div class="col-sm-2">
+
+        <label>
+
+                <input type="checkbox" ng-model="location.isChecked" >
+
+                <span>{{location.name}}</span>
+
+
+              </div>
+            </label>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<hr align="left" max-width="100%">
+
+</br>
+
+
+
+
+
+
+
+<div class="rowthird">
+
+<label>Facilities:*</label>
+
+        <div ng-repeat="facility in facilitychecklist">
+
+
+          <div class="col-sm-2">
+            <label>
+                    <input type="checkbox" ng-model="facility.isChecked" />
+
+                    <span>{{facility.name}}</span>
+
+</div>
+
+                </label>
+        </div>
+    </div>
+
+
+
+    <br>
+
+    <hr align="left" max-width="100%">
+
+    </br>
+
+
+
+
+
+
+
+<div class="rowfourth">
+
+
+
+    <div class="col-sm-3">
+
+
+  <label>Capacity:*</label>
+
+
+  <input type="number" class="input-small" required>
+
+</div>
+
+    <div class="col-sm-3">
+
+    <label>Purpose:*</label>
+
+    <select>
+    <option value="a">Appraisal Meeting</option>
+    <option value="ab">Client Call</option>
+    <option value="abc">Client Visit</option>
+    <option value="abcd">Interview</option>
+    <option value="abcde">Team Meeting</option>
+    <option value="abcdef">Training</option>
+    <option value="abcdefg">Video Conference</option>
+    </select>
+</div>
+    </div>
+
+
+
+  <div class="col-sm-3">
+
+    <label>Priority Facilities:*</label>
+
+    <select>
+    <option value="a">White Board</option>
+    <option value="ab">Projector</option>
+
+
+    </select>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+
+
+
+    <select>
+    <option value="am">(select facility-1)</option>
+    <option value="cc">(select facility-2)</option>
+
+
+  </select></div>
+
+    </div>
+
+    <hr align="left" width="100%">
+
+
+
+
+
+    <div class="rowfive">
+
+
+<div class="col-sm-4">
+  <label>Date:*</label>
+<input type="date">
+</div>
+
+<div class="col-sm-4">
+  <label>Time:*</label>
+<input type="time">
+
+</div>
+
+
+
+
+<div class="col-sm-4">
+
+<label>Duration:*</label>
+
+
+<input type="number" name="hour" min="0" max="24">
+
+
+
+<label>Hour(s)</label>
+
+
+
+<input type="number" name="hour" min="0" max="60">
+
+
+
+
+
+
+
+<label>Min(s)</label>
+
+<!--
+
+
+
+<div ng-controller="ButtonsCtrl">
+
+
+
+    <h4>Facilities :*</h4>
+	<div class="col-sm-2">
+        <input type="checkbox"  ng-model="checkingModel.z" ><label>Multiple Computers </label></div>
+					<div class="col-sm-2">
+        <input type="checkbox"  ng-model="checkingModel.y" ><label>Network Point</label></div>
+					<div class="col-sm-2">
+        <input type="checkbox"  ng-model="checkingModel.x" ><label>Projector</label></div>
+					<div class="col-sm-3">
+        <input type="checkbox"  ng-model="checkingModel.w" ><label>Video Conferensing </label></div>
+					<div class="col-sm-3">
+        <input type="checkbox"  ng-model="checkingModel.v" ><label>White Board </label></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="rowfour">
+
+
+    	<div class="col-sm-3">
+
+    <label>Capacity:*</label>
+
+
+    <input type="number" class="input-small" required>
+
+
+    </div>
+  	<div class="col-sm-3">
+    <label>Purpose:*</label>
+
+    <select>
+    <option value="a">Appraisal Meeting</option>
+    <option value="ab">Client Call</option>
+    <option value="abc">Client Visit</option>
+    <option value="abcd">Interview</option>
+    <option value="abcde">Team Meeting</option>
+    <option value="abcdef">Training</option>
+    <option value="abcdefg">Video Conference</option>
+    </select>
+
+    </div>
+
+
+
+    	<div class="col-sm-3">
+    <label>Priority Facilities:*</label>
+    <select>
+    <option value="a">White Board</option>
+    <option value="ab">Projector</option>
+
+
+    </select>
+    </div>
+  	<div class="col-sm-3">
+
+    <label>.</label>
+    <select>
+    <option value="am">(select facility-1)</option>
+    <option value="cc">(select facility-2)</option>
+
+
+    </select>
+
+    </div>
+
+    <hr align="left" width="100%">
+
+    <div class="rowfive">
+-->
